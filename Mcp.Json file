@@ -1,0 +1,16 @@
+## Amazon Q MCP Server Setup
+
+This project uses a lightweight Kubernetes MCP server through Amazon Q's `uvx` CLI:
+
+json
+{
+  "mcpServers": {
+    "kubernetes-mcp-server": {
+      "command": "uvx",
+      "args": ["kubernetes-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      }
+    }
+  }
+}
